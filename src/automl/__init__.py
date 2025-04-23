@@ -1,2 +1,2 @@
-def main() -> None:
-    print("Hello from automl!")
+# def main() -> None:
+#     print("Hello from automl!")
