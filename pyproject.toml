@@ -22,6 +22,7 @@ dependencies = [
 [project.scripts]
 automl = "automl.automl:main"
 data-profile = "automl.dataprofile:main"
+dbf-predictor = "automl.dbf_predictor:main"
 
 [build-system]
 requires = ["hatchling"]

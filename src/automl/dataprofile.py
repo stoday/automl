@@ -16,7 +16,7 @@ def main():
     sys.argv = ["streamlit", "run", str(Path(__file__).resolve())]
     stcli.main()
 
-# 你也可以直接寫 Streamlit 程式在這檔案裡
+# Streamlit 程式
 if __name__ == "__main__":
     import streamlit as st
     
