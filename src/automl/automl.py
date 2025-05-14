@@ -16,7 +16,7 @@ def main():
     sys.argv = ["streamlit", "run", str(Path(__file__).resolve())]
     stcli.main()
 
-# 你也可以直接寫 Streamlit 程式在這檔案裡
+# Streamlit
 if __name__ == "__main__":
     import streamlit as st
     import pandas as pd
@@ -40,12 +40,12 @@ if __name__ == "__main__":
         # 選擇目標欄位
         target = st.selectbox("選擇目標變數欄位", df.columns)
 
-        # (2) 前處理選項
-        st.subheader("⚙️ 前處理選項")
-        normalize = st.checkbox("標準化 (normalize)")
-        remove_outliers = st.checkbox("移除離群值 (remove_outliers)")
-        multicollinearity = st.checkbox("移除多重共線性 (remove_multicollinearity)")
-        fix_imbalance = st.checkbox("平衡類別樣本 (fix_imbalance)") if "分類" in mode else False
+        # # (2) 前處理選項
+        # st.subheader("⚙️ 前處理選項")
+        # normalize = st.checkbox("標準化 (normalize)")
+        # remove_outliers = st.checkbox("移除離群值 (remove_outliers)")
+        # multicollinearity = st.checkbox("移除多重共線性 (remove_multicollinearity)")
+        # fix_imbalance = st.checkbox("平衡類別樣本 (fix_imbalance)") if "分類" in mode else False
 
         if st.button("開始前處理與建模"):
             st.info("正在進行前處理與模型比較，請稍候...")
@@ -57,9 +57,9 @@ if __name__ == "__main__":
                     module = reg
 
                 module.setup(data=df, target=target, session_id=123,
-                            normalize=normalize,
-                            remove_outliers=remove_outliers,
-                            remove_multicollinearity=multicollinearity,
+                            # normalize=normalize,
+                            # remove_outliers=remove_outliers,
+                            # remove_multicollinearity=multicollinearity,
                             # fix_imbalance=fix_imbalance if "分類" in mode else False,
                             html=False, verbose=False)
                 best_model = module.compare_models()
