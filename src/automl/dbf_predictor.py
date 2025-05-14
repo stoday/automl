@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
 import streamlit.web.cli as stcli
+import os
 
 
 def main():
@@ -139,8 +140,8 @@ if __name__ == "__main__":
         if target_date_str == '2025-05-30':
             day_order = '一'
             # ---
-            # 取得 2024 年全部資料
-            data_2024 = pd.read_csv('day_sum_20240610.csv')
+            # 取得 2024 年全部資料(加上絕對路徑)
+            data_2024 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20240610.csv'))
             
             # 取得 2024 年的起迄站運量
             print(data_2024.head())
@@ -149,7 +150,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2023 年全部資料
-            data_2023 = pd.read_csv('day_sum_20230622.csv')
+            data_2023 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20230622.csv'))
             
             # 取得 2023 年的起迄站運量
             print(data_2023.head())
@@ -158,7 +159,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2022 年全部資料
-            data_2022 = pd.read_csv('day_sum_20220603.csv')
+            data_2022 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20220603.csv'))
             
             # 取得 2022 年的起迄站運量
             print(data_2022.head())
@@ -167,7 +168,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2021 年全部資料
-            data_2021 = pd.read_csv('day_sum_20210612.csv')
+            data_2021 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20210612.csv'))
             
             # 取得 2021 年的起迄站運量
             print(data_2021.head())
@@ -176,7 +177,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2020 年全部資料
-            data_2020 = pd.read_csv('day_sum_20200625.csv')
+            data_2020 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20200625.csv'))
             
             # 取得 2020 年的起迄站運量
             print(data_2020.head())
@@ -193,7 +194,7 @@ if __name__ == "__main__":
             day_order = '二'
             # ---
             # 取得 2024 年全部資料
-            data_2024 = pd.read_csv('day_sum_20240611.csv')
+            data_2024 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20240611.csv'))
             
             # 取得 2024 年的起迄站運量
             print(data_2024.head())
@@ -202,14 +203,14 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2023 年全部資料
-            data_2023 = pd.read_csv('day_sum_20230623.csv')
+            data_2023 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20230623.csv'))
             
             # 取得 2023 年的起迄站運量-1
             print(data_2023.head())
             data_2023_value_1 = data_2023.loc[data_2023['起站'] == start_station, end_station].values[0]
             print(data_2023_value_1)
 
-            data_2023 = pd.read_csv('day_sum_20230624.csv')
+            data_2023 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20230624.csv'))
             
             # 取得 2023 年的起迄站運量-2
             print(data_2023.head())
@@ -220,7 +221,7 @@ if __name__ == "__main__":
 
             # ---
             # 取得 2022 年全部資料
-            data_2022 = pd.read_csv('day_sum_20220605.csv')
+            data_2022 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20220605.csv'))
             
             # 取得 2022 年的起迄站運量
             print(data_2022.head())
@@ -229,7 +230,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2021 年全部資料
-            data_2021 = pd.read_csv('day_sum_20210614.csv')
+            data_2021 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20210614.csv'))
             
             # 取得 2021 年的起迄站運量
             print(data_2021.head())
@@ -238,7 +239,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2020 年全部資料
-            data_2020 = pd.read_csv('day_sum_20200628.csv')
+            data_2020 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20200628.csv'))
             
             # 取得 2020 年的起迄站運量
             print(data_2020.head())
@@ -253,7 +254,7 @@ if __name__ == "__main__":
             day_order = '三'
             # ---
             # 取得 2024 年全部資料
-            data_2024 = pd.read_csv('day_sum_20240612.csv')
+            data_2024 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20240612.csv'))
             
             # 取得 2024 年的起迄站運量
             print(data_2024.head())
@@ -262,7 +263,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2023 年全部資料
-            data_2023 = pd.read_csv('day_sum_20230625.csv')
+            data_2023 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20230625.csv'))
             
             # 取得 2023 年的起迄站運量
             print(data_2023.head())
@@ -271,7 +272,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2022 年全部資料
-            data_2022 = pd.read_csv('day_sum_20220605.csv')
+            data_2022 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20220605.csv'))
             
             # 取得 2022 年的起迄站運量
             print(data_2022.head())
@@ -280,7 +281,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2021 年全部資料
-            data_2021 = pd.read_csv('day_sum_20210614.csv')
+            data_2021 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20210614.csv'))
             
             # 取得 2021 年的起迄站運量
             print(data_2021.head())
@@ -289,7 +290,7 @@ if __name__ == "__main__":
             
             # ---
             # 取得 2020 年全部資料
-            data_2020 = pd.read_csv('day_sum_20200628.csv')
+            data_2020 = pd.read_csv(os.path.join(os.path.dirname(__file__), 'day_sum_20200628.csv'))
             
             # 取得 2020 年的起迄站運量
             print(data_2020.head())
