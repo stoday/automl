@@ -37,6 +37,10 @@ if __name__ == "__main__":
     
     # 顯示現在的絕對路徑
     st.write("當前絕對路徑:", Path(__file__).resolve())
+    
+    # 顯示此資料夾下的檔案目錄
+    st.write("當前資料夾下的檔案目錄:")
+    st.write(os.listdir(os.path.dirname(__file__)))
 
     # 標題
     st.title("2025 年端午節旅運人數預測")
